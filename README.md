@@ -1,3 +1,34 @@
+# Ma-connect
+* Module: F3M7BO
+* Project: Ma-connect
+* Opdrachtgever: Zoë Ros
+* Naam: Robin Zhao
+* Klas: SD2D
+* Datum: 6-4-2022
+
+Ma-Connect is een platform waarbij mensen van verschillende opleidingen van het Mediacollege elkaar kunnen vinden. Zo kan je mensen zoeken die de skills hebben, om jou te helpen met jouw project. Ook kan je je connecties uitbreiden. 
+
+Ma-connect wordt geprogrammeerd met behulp van React.js. React is een Javascriptbibliotheek om gebruikersinterfaces mee te bouwen. Ook word firebase gebruikt om user data te bewaren. Firebase is een door Google ontwikkeld platform voor het maken van mobiele en webapplicaties.
+
+### Tests
+
+Voor het debuggen gebruik ik gewoon de ingebouwde debugger van visual studio code. Ik ga dan één voor één de functies langs en dan kijk ik of er problemen komen. Als er toch een problemem is probeer ik de code zo aan te passen dat het weer werkt. De app zelf staat nog niet op een server. De app is nog niet genoeg ontwikkeld om het live te zetten. Wij zijn wel van plan om het via filezilla online te zetten. Verder op de live server werkt alles prima. Kwa database moet ik die nog opzetten met node en moet ik het nog verbinden met mijn code (Verder is dit nog een W.I.P).
+
+### Tools
+* Visual studio code
+* React.js
+* Redux
+* Matarial UI
+* Node
+* Firebase
+
+### Developer/Designer/Scrum master/...
+* Robin Zhao
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts
