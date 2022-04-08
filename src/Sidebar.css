@@ -75,3 +75,29 @@
     border-radius: 10px;
     margin-top: 10px;
 }
+
+/* topic sidebar items positioneren */
+.sidebar_recentItem{
+    display: flex;
+    font-size: 13px;
+    color: gray;
+    font-weight: bolder;
+    cursor: pointer;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+/* hover effect op sidebar */
+.sidebar_recentItem:hover{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+/* hashtag naast de topic sidebar margin gegeven */
+.sidebar_hash{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+

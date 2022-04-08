@@ -1,6 +1,7 @@
 .Header{
     display: flex;
     justify-content: space-evenly;
+    background-color: white;
     border-bottom: 0.1px solid #d8d8d8;
     padding: 10px 0px 10px 0px;
     width: 100%;

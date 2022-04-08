@@ -32,7 +32,7 @@ function Sidebar() {
 
         <div className="sidebar_bottom">
             <p>Recent</p>
-            {recentItem('reactjs')}
+            {recentItem('React.js')}
             {recentItem('Mediacollege')}
             {recentItem('Ma-connect')}
         </div>
