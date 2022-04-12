@@ -6,6 +6,7 @@ import Post from './Post.js';
 import { useSelector } from 'react-redux';
 import { selectUser } from './features/userSlice';
 import Login from './Login.js';
+// import Login from './Login.js';
 function App() {
   const user = useSelector(selectUser)
 
@@ -19,7 +20,8 @@ function App() {
           <Post />
           {/* Widgets */}
         </div>
-      )}   
+      )}
+
     </div>
   );
 }

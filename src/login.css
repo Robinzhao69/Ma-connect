@@ -28,3 +28,22 @@
     border-radius: 5px;
     border: 1px solid #f1f1f1;
 }
+
+.login > form > button{
+    height: 50px;
+    font-size: large;
+    color: white;
+    background-color: rgba(255, 0, 157, 0.733);
+    border-radius: 5px;
+    border: none;
+}
+
+.login_register{
+    color: rgba(255, 0, 157, 0.733);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login > p{
+    margin-top: 20px;
+}

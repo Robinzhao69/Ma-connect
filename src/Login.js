@@ -1,9 +1,10 @@
 import React from 'react'
+import { auth } from './firebase';
 import './login.css'
 
 function Login() {
     const loginToApp = () => {};
-    
+      auth
     const register = () => {};
 
   return (

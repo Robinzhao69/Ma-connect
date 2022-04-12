@@ -13,7 +13,7 @@ function Sidebar() {
   return (
     <div className='Sidebar'>
         <div className="sidebar_top">
-            <img src="https://pbs.twimg.com/media/DlXekIXWsAQ4G35.jpg" alt="" />
+            <img src="https://image.posterlounge.nl/images/l/1898375.jpg" alt="" />
             <Avatar className='sidebaar_avatar'/>
             <h2>Robin</h2>
             <h4>Robin</h4>
