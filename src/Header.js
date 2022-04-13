@@ -7,8 +7,18 @@ import AssignmentIcon from '@mui/icons-material/Assignment';
 import ChatIcon from '@mui/icons-material/Chat';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import HeaderOption from './HeaderOption';
+import { useDispatch } from 'react-redux';
+import { auth } from './firebase';
+import { logout } from './features/userSlice';
 
 function Header() {
+  const dispatch = useDispatch();
+
+
+  const logoutOfApp = () => {
+    dispatch(logout())
+    auth.signOut();
+  };
   return (
     <div className='Header'>
         <div className='header_left'>
@@ -25,7 +35,7 @@ function Header() {
              <HeaderOption Icon={AssignmentIcon} Title="Tasks"/>
              <HeaderOption Icon={ChatIcon} Title="Messaging"/>
              <HeaderOption Icon={NotificationsActiveIcon} Title="Notifications"/>
-             <HeaderOption avatar="https://media.istockphoto.com/photos/portrait-of-a-man-picture-id155360935?k=20&m=155360935&s=170667a&w=0&h=QutjQIhQRwxY_sxwYSbYPofZgZXEzTE-8gtuoIjyAzE=" Title="Me"/>
+             <HeaderOption avatar="https://media.istockphoto.com/photos/portrait-of-a-man-picture-id155360935?k=20&m=155360935&s=170667a&w=0&h=QutjQIhQRwxY_sxwYSbYPofZgZXEzTE-8gtuoIjyAzE=" Title="Me" onClick={logoutOfApp}/>
         </div>
     </div>
   )

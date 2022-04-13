@@ -38,6 +38,10 @@
     border: none;
 }
 
+.login > form > button:hover{
+    cursor: pointer;
+}
+
 .login_register{
     color: rgba(255, 0, 157, 0.733);
     cursor: pointer;
