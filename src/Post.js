@@ -9,12 +9,16 @@ import InputOption from './inputOption';
 import Posts from './Posts';
 import { db } from './firebase';
 import firebase from 'firebase/compat/app';
+import { useSelector } from 'react-redux';
+import { selectUser } from './features/userSlice';
+import FlipMove from 'react-flip-move';
 
 function Post() {
+    const user = useSelector(selectUser);
     const [input, setInput] = useState('');
     const [posts, setPosts] = useState([])
     useEffect(() => {
-        db.collection("posts").orderBy("timestamp", "desc").onSnapshot(snapshot => (
+        db.collection("posts").orderBy("timestamp", "desc").onSnapshot((snapshot) => (
             setPosts(snapshot.docs.map(doc => (
                 {
                     id: doc.id,
@@ -28,10 +32,10 @@ function Post() {
         e.preventDefault();
 
         db.collection('posts').add({
-            name: 'Robin Zhao',
-            description: 'dit is een test',
+            name: user.displayName,
+            description: user.email,
             message: input,
-            photoUrl: '',
+            photoUrl: user.photoUrl || "",
             timestamp: firebase.firestore.FieldValue.serverTimestamp()
         })
     }
@@ -57,15 +61,18 @@ function Post() {
         </div>
 
         {/* posts */}
-        {posts.map(({ id, data: { name, description, message, photoUrl } }) => (
-            <Posts 
-                key={id}
-                name={name}
-                description={description}
-                message={message}
-                photoUrl={photoUrl}
-            />
-        ))}
+        <FlipMove>
+            {posts.map(({ id, data: { name, description, message, photoUrl } }) => (
+                <Posts 
+                    key={id}
+                    name={name}
+                    description={description}
+                    message={message}
+                    photoUrl={photoUrl}
+                />
+            ))}
+        </FlipMove>
+        
     </div>
   )
 }

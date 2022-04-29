@@ -16,7 +16,7 @@ function Header() {
 
 
   const logoutOfApp = () => {
-    dispatch(logout())
+    dispatch(logout());
     auth.signOut();
   };
   return (
@@ -35,7 +35,7 @@ function Header() {
              <HeaderOption Icon={AssignmentIcon} Title="Tasks"/>
              <HeaderOption Icon={ChatIcon} Title="Messaging"/>
              <HeaderOption Icon={NotificationsActiveIcon} Title="Notifications"/>
-             <HeaderOption avatar="https://media.istockphoto.com/photos/portrait-of-a-man-picture-id155360935?k=20&m=155360935&s=170667a&w=0&h=QutjQIhQRwxY_sxwYSbYPofZgZXEzTE-8gtuoIjyAzE=" Title="Me" onClick={logoutOfApp}/>
+             <HeaderOption avatar={true} Title="Me" onClick={logoutOfApp}/>
         </div>
     </div>
   )

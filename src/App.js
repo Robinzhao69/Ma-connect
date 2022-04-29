@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { login, logout, selectUser } from './features/userSlice';
 import Login from './Login.js';
 import { auth } from './firebase';
-// import Login from './Login.js';
+
 function App() {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
@@ -27,13 +27,13 @@ function App() {
         dispatch(logout());
       }
     });
-  }, [dispatch]);
+  }, []);
 
   return (
     <div className="App">
       <Header />
 
-      {!user ? (<Login />) : (
+      {!user ? <Login /> : (
         <div className='app_body'>
           <Sidebar />
           <Post />
